@@ -1,0 +1,34 @@
+<!--Include file; containing all form html-->
+<form name="myForm" action="main.php" method="post">
+	
+		<label >Surname</label> <br/>
+		<input type="text" name="surname" id="surname"
+		value="<?php if (isset($_POST['surname'])) echo htmlspecialchars($_POST['surname'])?>"/>
+		<span style='color:red'> <?php if (isset($errors['surname'])) echo htmlspecialchars($errors['surname'])?> </span></br>
+	
+		<label >Firstname</label> <br/>
+		<input type="text" name="firstname" id="firstname"
+		value="<?php if (isset($_POST['firstname'])) echo htmlspecialchars($_POST['firstname'])?>"/> 
+		<span style='color:red'> <?php if (isset($errors['firstname'])) echo htmlspecialchars($errors['firstname'])?> </span></br>
+
+		<label >Email address</label> <br/>
+		<input type="text" name="email" id="email"
+		value="<?php if (isset($_POST['email'])) echo htmlspecialchars($_POST['email'])?>"/> 
+		<span style='color:red'> <?php if (isset($errors['email'])) echo htmlspecialchars($errors['email'])?> </span></br>
+	
+	
+	
+		<label >Password</label> <br/>
+		<input type="password" name="pass" id="pass"
+		value="<?php if (isset($_POST['pass'])) echo htmlspecialchars($_POST['pass'])?>"/>
+		<span style='color:red'> <?php if (isset($errors['pass'])) echo htmlspecialchars($errors['pass'])?> </span></br>
+	
+	
+		<label>Confirm Password</label> <br/>
+		<input type="password" name="cpass" id="cpass"
+		value="<?php if (isset($_POST['cpass'])) echo htmlspecialchars($_POST['cpass'])?>"/><span style='color:red'> <?php if (isset($errors['cpass'])) echo htmlspecialchars($errors['cpass'])?> </span></br>
+			
+		<input type="submit" name="submit" value="Submit" class="button"/>
+		<input type="reset" name="reset" value="Reset" class="button"/>
+	
+</form>
